@@ -1,0 +1,195 @@
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes section-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-wrap,
+.admin-wrap {
+    animation: page-enter .5s ease-out both;
+}
+
+.content-wrap > section {
+    animation: section-enter .48s ease-out both;
+}
+
+.content-wrap > section:nth-child(2) {
+    animation-delay: .06s;
+}
+
+.content-wrap > section:nth-child(3) {
+    animation-delay: .12s;
+}
+
+.content-wrap > section:nth-child(4) {
+    animation-delay: .18s;
+}
+
+.stat-card,
+.student-card,
+.portfolio-card {
+    animation: section-enter .48s ease-out backwards;
+}
+
+.stat-card:nth-child(2),
+.student-card:nth-child(2),
+.portfolio-card:nth-child(2) {
+    animation-delay: .06s;
+}
+
+.stat-card:nth-child(3),
+.portfolio-card:nth-child(3) {
+    animation-delay: .12s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: .18s;
+}
+
+.stat-card,
+.student-card,
+.support-card,
+.portfolio-card,
+.filter-panel,
+.hero-banner,
+.profile-hero,
+.day-group-card,
+.activity-card {
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.stat-card:hover,
+.student-card:hover,
+.support-card:hover,
+.portfolio-card:hover,
+.filter-panel:hover,
+.hero-banner:hover,
+.profile-hero:hover,
+.day-group-card:hover,
+.activity-card:hover {
+    transform: translateY(-4px);
+    border-color: #f0c4c7;
+    box-shadow: 0 16px 32px #24252b14;
+}
+
+.sidebar .nav-link {
+    transition: color .2s ease-in-out, background-color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.sidebar .nav-link:hover {
+    transform: translateX(4px);
+}
+
+.btn:not(:disabled),
+button:not(:disabled):not(.menu-toggle):not(.detail-close):not(.lightbox-close):not(.lightbox-nav):not(.portfolio-detail-close):not(.profile-lightbox-close),
+.reset-link,
+.date-filter-trigger {
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.btn:not(:disabled):hover,
+button:not(:disabled):not(.menu-toggle):not(.detail-close):not(.lightbox-close):not(.lightbox-nav):not(.portfolio-detail-close):not(.profile-lightbox-close):hover,
+.reset-link:hover,
+.date-filter-trigger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px #24252b14;
+}
+
+.btn:not(:disabled):active,
+button:not(:disabled):not(.menu-toggle):not(.detail-close):not(.lightbox-close):not(.lightbox-nav):not(.portfolio-detail-close):not(.profile-lightbox-close):active,
+.reset-link:active,
+.date-filter-trigger:active {
+    transform: scale(.95);
+}
+
+input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not(.flatpickr-input),
+textarea,
+select,
+.form-control,
+.form-select {
+    transition: transform .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not(.flatpickr-input):hover,
+textarea:hover,
+select:hover,
+.form-control:hover,
+.form-select:hover {
+    transform: translateY(-1px);
+    border-color: #f87171;
+    box-shadow: 0 3px 10px #24252b0d;
+}
+
+input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not(.flatpickr-input):focus,
+textarea:focus,
+select:focus,
+.form-control:focus,
+.form-select:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px #ef444426;
+}
+
+.portfolio-section-icon,
+.portfolio-card-index,
+.role-badge,
+.category-pill,
+.hero-tag,
+.floating-badge {
+    transition: transform .2s ease-in-out, border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+a.portfolio-section-icon:hover,
+a.portfolio-card-index:hover,
+a.role-badge:hover,
+a.category-pill:hover,
+a.hero-tag:hover,
+a.floating-badge:hover {
+    transform: scale(1.05);
+}
+
+.photo-zoom {
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.photo-zoom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px #24252b24;
+}
+
+.profile-photo {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 4px #d7192020, 0 8px 18px #24252b24;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
